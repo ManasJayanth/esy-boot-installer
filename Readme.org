@@ -1,0 +1,4 @@
+* Notes
+
+Merlin doesn't support =.mly= and =.mll= files well.
+https://discuss.ocaml.org/t/using-ocaml-lsp-and-vim-with-mll-and-mly-files/9733/2
