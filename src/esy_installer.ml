@@ -51,7 +51,7 @@ let main ~install_file =
   in
   let print_ops (src, dest) =
     print_endline @@ Printf.sprintf "mkdir -p %s" (Filename.dirname dest);
-    print_endline @@ Printf.sprintf "cp %s %s || true" (Str.global_replace (Str.regexp "?") "" src) (Filename.dirname dest)
+    print_endline @@ Printf.sprintf "cp %s %s || true" (Str.global_replace (Str.regexp "?") "" src) dest
                                     (* TODO not all copy operations must silently fail. Only source paths with ? can *)
   in
   Parser.main Lexer.token lexbuf
