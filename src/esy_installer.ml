@@ -50,7 +50,9 @@ let main ~install_file =
     List.fold_left fold_artifacts acc artifacts
   in
   let print_ops (src, dest) =
-    print_endline @@ Printf.sprintf "install -D %s %s" (Filename.dirname dest) src
+    print_endline @@ Printf.sprintf "mkdir -p %s" (Filename.dirname dest);
+    print_endline @@ Printf.sprintf "cp %s %s || true" (Str.global_replace (Str.regexp "?") "" src) (Filename.dirname dest)
+                                    (* TODO not all copy operations must silently fail. Only source paths with ? can *)
   in
   Parser.main Lexer.token lexbuf
   |> List.fold_left fold_entries [] 
