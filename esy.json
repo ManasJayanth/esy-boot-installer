@@ -22,7 +22,7 @@
     "start": "esy x esy-installer"
   },
   "dependencies": {
-    "ocaml": "4.12.0"
+    "ocaml": "*"
   },
   "devDependencies": {
     "@opam/ocaml-lsp-server": "*",
