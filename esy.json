@@ -1,4 +1,5 @@
 {
+  "name": "esy-boot-installer",
   "esy": {
     "buildsInSource": true,
     "build": "make PREFIX=#{self.install} esy-installer",
