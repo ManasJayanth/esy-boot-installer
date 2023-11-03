@@ -17,8 +17,8 @@ let main ~install_file =
         | "lib", Some p -> Printf.sprintf "lib/%s/%s" package_name p
         | "lib_root", None -> Printf.sprintf "lib/%s" artifact_filename
         | "lib_root", Some p -> Printf.sprintf "lib/%s" p
-        | "lib_exec", None -> Printf.sprintf "lib/%s/%s" package_name artifact_filename
-        | "lib_exec", Some p -> Printf.sprintf "lib/%s/%s" package_name p
+        | "libexec", None -> Printf.sprintf "lib/%s/%s" package_name artifact_filename
+        | "libexec", Some p -> Printf.sprintf "lib/%s/%s" package_name p
         | "bin", None -> Printf.sprintf "bin/%s" artifact_filename
         | "bin", Some p -> Printf.sprintf "bin/%s" p
         | "sbin", None -> Printf.sprintf "sbin/%s" artifact_filename
